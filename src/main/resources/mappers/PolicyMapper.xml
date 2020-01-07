@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.noname.dao.PolicyDao">
+
+    <select id="getAll" resultType="com.noname.pojo.Policy">
+      SELECT
+        num,
+        ref_city_num refCityNum,
+        city_code cityCode,
+        year,
+        pub_date pubDate,
+        tag,
+        tag_type tagType,
+        title,
+        content,
+        source,
+        url,
+        actived,
+        version,
+        del_flag delFlag,
+        created_by createdBy,
+        created_time createdTime,
+        updated_by updatedBy,
+        updated_time updateTime,
+        city_name cityName,
+        tag_name tagName
+      FROM city_policy_detail
+    </select>
+</mapper>
